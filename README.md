@@ -1,4 +1,5 @@
 # ece_481_lab3
+Link to Github Repo: https://github.com/HolReeve/ece_481_lab3_reeves.git
 Files
 src/counter.sv - part a counter. parameterized width, counts up/down, sync reset, enable, wraps around
 sim/tb_counter.sv - testbench for the counter. checks reset, hold, up/down counting, overflow, underflow, for WIDTH=4 and WIDTH=8
