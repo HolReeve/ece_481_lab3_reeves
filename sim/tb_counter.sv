@@ -51,7 +51,7 @@ module tb_counter_unit #(parameter WIDTH = 4);
         end
 
         
-        rst = 1; check("reset before overflow"); rst = 0;
+        rst = 1; expected_q = 0; check("reset before overflow"); rst = 0;
         up = 1;
         for (i = 0; i < (1 << WIDTH); i++) begin
             expected_q = expected_q + 1;
@@ -59,7 +59,7 @@ module tb_counter_unit #(parameter WIDTH = 4);
         end
 
         
-        rst = 1; check("reset before underflow"); rst = 0;
+        rst = 1; expected_q = 0; check("reset before underflow"); rst = 0;
         up = 0;
         expected_q = expected_q - 1;
         check("underflow to max");
