@@ -1,24 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/17/2026 09:20:10 PM
-// Design Name: 
-// Module Name: register_bank
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module register_bank #(
     parameter M = 4,
@@ -42,7 +21,8 @@ module register_bank #(
             regs[wr_addr] <= wr_data;
         end
     end
-
-    assign rd_data = regs[rd_addr];
+    
+    always_comb
+        rd_data = regs[rd_addr];
 
 endmodule
